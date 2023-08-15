@@ -1,15 +1,18 @@
-names:list[str] = ["John", "Marry"]
+names: list[str] = ["John", "Marry"]
 
 _names = iter(names)
 print(_names.__next__())
 print(_names.__next__())
 print(_names.__next__())
 
+
 class Iterator:
     def __iter__(self):
         pass
+
     def __next__(self):
         pass
+
 
 instances = Iterator()
 
