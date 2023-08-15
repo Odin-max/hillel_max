@@ -13,4 +13,6 @@ while True:
     except Exception:
         break   
 
+file.close()
+
 print(counter)
