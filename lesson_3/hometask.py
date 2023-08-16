@@ -28,4 +28,4 @@ while True:
 file.close()
 
 print("Результати:", "".join(results))
-print("Всього строк: ",lines)
+print("Всього строк: ", lines)
