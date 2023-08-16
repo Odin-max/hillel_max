@@ -11,7 +11,7 @@ while True:
         word = file.readline()
         if word.startswith("user"):
             my_input = input(
-                f"Додати слово '{word.strip()}' до результату? (y/n): "
+            f"Додати слово '{word.strip()}' до результату? (y/n): "
             ).lower()
             if my_input == "y":
                 results.append(word)
