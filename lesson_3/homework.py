@@ -12,18 +12,4 @@ while True:
     try:
         word = file.readline()
         if word.startswith("user"):
-            my_input = input(
-                f"Додати слово '{word.strip()}' до результату? (y/n): "
-            ).lower()
-            if my_input == "y":
-                results.append(word)
-            else:
-                print("wrong answer")
-        if not word:
-            break
-    except Exception:
-        break
 
-file.close()
-
-print("Результати:", "".join(results))
