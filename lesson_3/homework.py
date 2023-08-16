@@ -12,18 +12,20 @@ while True:
     try:
         word = file.readline()
         if word.startswith("user"):
-            my_input = input(
-                f"Додати слово '{word.strip()}' до результату? (y/n): "
-            ).lower()
+            # ДЛЯ ЛІНИВИХ
+            # my_input = "y"
+            # print(f"Додати слово '{word.strip()}' до результату? (y/n): {my_input}")
+            my_input = input(f"Додати слово '{word.strip()}' до результату? (y/n): ").lower()
             if my_input == "y":
                 results.append(word)
             else:
-                print("wrong answer")
+                print("wrong answer") 
         if not word:
-            break
-    except Exception:
-        break
+            break   
+    except:
+        pass
 
 file.close()
 
-print("Результати:", "".join(results))
+print("Результати:", ''.join(results))
+
