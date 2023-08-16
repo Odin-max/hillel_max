@@ -2,3 +2,6 @@
 venv
 rockyou.txt
 .vscode
+debug.py
+files.py
+iterators.py
