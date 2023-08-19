@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "40225b534aba24359e5ad1650744c5b31f63df1dc6d4f6ed2852dbfb597359ad"
+            "sha256": "473713228ab29774184d9e3b6c0af03d175c56520af70a7b9157b36452102658"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -61,11 +61,11 @@
         },
         "click": {
             "hashes": [
-                "sha256:48ee849951919527a045bfe3bf7baa8a959c423134e1a5b98c05c20ba75a1cbd",
-                "sha256:fa244bb30b3b5ee2cae3da8f55c9e5e0c0e86093306301fb418eb9dc40fbded5"
+                "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28",
+                "sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==8.1.6"
+            "version": "==8.1.7"
         },
         "colorama": {
             "hashes": [
@@ -231,6 +231,14 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==2.16.1"
+        },
+        "pympler": {
+            "hashes": [
+                "sha256:993f1a3599ca3f4fcd7160c7545ad06310c9e12f70174ae7ae8d4e25f6c5d3fa",
+                "sha256:d260dda9ae781e1eab6ea15bacb84015849833ba5555f141d2d9b7b7473b307d"
+            ],
+            "index": "pypi",
+            "version": "==1.0.1"
         },
         "six": {
             "hashes": [
