@@ -1,5 +1,5 @@
-import sys
 from pympler.asizeof import asizeof
+
 users: list[str] = ["john", "marry", "mark", "jack", "marry", "mark"]
 
 # users_seen = set()
@@ -7,7 +7,8 @@ users: list[str] = ["john", "marry", "mark", "jack", "marry", "mark"]
 #     if user in users_seen:
 #         continue
 #     users_seen.add(user)
-#     print(user) 
+#     print(user)
+
 
 def dedup(collection):
     items = set()

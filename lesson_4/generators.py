@@ -1,8 +1,10 @@
 def foo():
     print("Hello, i'm foo")
 
+
 def bar(function):
     function.__call__()
+
 
 def baz():
     yield 1
@@ -10,6 +12,7 @@ def baz():
     yield 3
     yield 4
     yield 5
+
 
 gen = baz()
 print(next(gen))
