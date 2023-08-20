@@ -1,5 +1,5 @@
 from typing import Generator
-from uuid import uuid4, UUID
+from uuid import UUID, uuid4
 
 used_uuids_by_user: dict[str, set[UUID]] = {}
 
