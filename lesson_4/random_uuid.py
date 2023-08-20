@@ -1,7 +1,8 @@
 from typing import Generator
 from uuid import uuid4, UUID
 
-used_uuids_by_user: dict[str, set [UUID]]= {}
+used_uuids_by_user: dict[str, set[UUID]] = {}
+
 
 def generate_unique_uuid_as_function(user: str) -> UUID:
     while True:
@@ -9,10 +10,11 @@ def generate_unique_uuid_as_function(user: str) -> UUID:
 
         if generate_unique_uuid not in used_uuids_by_user[user]:
             used_uuids_by_user[user].add(generate_unique_uuid)
-            return generated_uuid    
+            return generated_uuid
+
 
 def generate_unique_uuid() -> Generator[UUID, None, None]:
-    used_uuids: set[UUID]= set()
+    used_uuids: set[UUID] = set()
     while True:
         generated_uuid = uuid4()
 
