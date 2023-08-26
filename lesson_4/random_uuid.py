@@ -8,8 +8,8 @@ def generate_unique_uuid_as_function(user: str) -> UUID:
     while True:
         generated_uuid = uuid4()
 
-        if generate_unique_uuid not in used_uuids_by_user[user]:
-            used_uuids_by_user[user].add(generate_unique_uuid)
+        if generated_uuid not in used_uuids_by_user[user]:
+            used_uuids_by_user[user].add(generated_uuid)
             return generated_uuid
 
 
