@@ -1,9 +1,4 @@
-# class Person:
-#     def __init__(self, name:str, age:int) -> None:
-#         self.name:str = name
-#         self.age: int = age
 import time
-
 
 class Person:
     _instance = None
@@ -16,13 +11,11 @@ class Person:
             exec_time = time.perf_counter() - start
             print(f"Exec time: {func.__name__}:{exec_time}")
             return result
-
         return inner
 
     def __new__(cls, *args, **kwargs):
         if not cls._instance:
             cls._instance = super().__new__(cls)
-
         return cls._instance
 
     def __init__(self, name: str, age: int) -> None:
@@ -33,7 +26,6 @@ class Person:
         self.is_adult: bool = False
         self._initialized = True
 
-    # @classmethod
     @staticmethod
     @perf_counter
     def greeting(name: str):
@@ -45,14 +37,11 @@ class Person:
             return False
         return True
 
-
 john = Person(name="John", age=12)
-
 marry = Person(name="Marry", age=12)
 
 Person.greeting(john.name)
 john.greeting(name=john.name)
 
 print(john.is_adultt)
-# print(john.name)
-# print(marry.name)
+
