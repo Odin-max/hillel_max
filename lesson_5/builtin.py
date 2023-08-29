@@ -1,4 +1,5 @@
 from pprint import pprint as print
+from itertools import zip_longest
 
 
 class Person:
@@ -7,23 +8,19 @@ class Person:
 
     def __repr__(self) -> str:
         return f"{self.name}: blablabla"
-    
+
     def __str__(self) -> str:
         return f"This string representation of {self.name}"
-    
-john = Person(name='John')
+
+
+john = Person(name="John")
 
 # print("John")
 # print(repr(john))
 # print(john.__str__())
 # print(str(john))
 
-john_contact_info_existence = (
-    True,
-    True,
-    False,
-    False
-)
+john_contact_info_existence = (True, True, False, False)
 
 # print(john_contact_info_existence)
 
@@ -34,7 +31,6 @@ john_contact_info_existence = (
 
 # if any(john_contact_info_existence):
 #     print("At least one field is filled")
-
 
 
 # team = ["Jack", "Marry", "John", "Rosa", "Mark"]
@@ -53,9 +49,9 @@ john_contact_info_existence = (
 # ll = lambda argument1, argument2: argument1 + argument2
 
 team: list[dict] = [
-    {'name':'John', 'age': 20, 'number': 1},
-    {'name':'Mark', 'age': 19, 'number': 3},
-    {'name':'Cavin', 'age': 21, 'number': 2},
+    {"name": "John", "age": 20, "number": 1},
+    {"name": "Mark", "age": 19, "number": 3},
+    {"name": "Cavin", "age": 21, "number": 2},
 ]
 
 
@@ -65,8 +61,10 @@ team: list[dict] = [
 class Animal:
     pass
 
+
 class Dog(Animal):
     pass
+
 
 spike = Dog()
 
@@ -92,14 +90,13 @@ def foo():
 
 # print(help(foo))
 
-from itertools import zip_longest
 
-names = ["John", "Marry", "Jack","Martin"]
+names = ["John", "Marry", "Jack", "Martin"]
 ages = [20, 30, 40]
 
 # for index, name in enumerate(names):
 #     print(f"{name=}, age = {ages[index]}")
 
 
-for name, age in zip_longest(names,ages):
+for name, age in zip_longest(names, ages):
     print(f"{name=}, {age=}")
