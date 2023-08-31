@@ -1,2 +1,1 @@
-Hey! My name is John!
-How are u?
+Hello, world!
