@@ -1,7 +1,9 @@
-import requests
 import os
 import threading
 import time
+
+import requests
+
 
 # CPU-bound task (simulated heavy computation)
 def encrypt_file(path: str):
@@ -9,12 +11,16 @@ def encrypt_file(path: str):
     # Simulate heavy computation by sleeping for a while
     _ = [i for i in range(100_000_000)]
 
+
 # I/O-bound task (downloading image from URL)
 def download_image(image_url):
-    print(f"Downloading image from {image_url} in thread {threading.current_thread().name}")
+    print(
+        f"Download from {image_url}, thread: {threading.current_thread().name}"
+    )
     response = requests.get(image_url)
     with open("image.jpg", "wb") as f:
         f.write(response.content)
+
 
 try:
     start_of_time = time.perf_counter()

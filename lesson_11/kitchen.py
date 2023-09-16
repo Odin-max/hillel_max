@@ -1,8 +1,10 @@
 from dataclasses import dataclass
 from enum import Enum
-from time import sleep
-from threading import Thread
+
+# from threading import Thread
 from multiprocessing import Process
+from time import sleep
+
 
 class DishSize(Enum):
     S = "S"
@@ -17,33 +19,33 @@ class Dish:
     ingredients: list[str]
 
 
-
 class Kitchen:
     @staticmethod
     def heat(dish: Dish):
         print(f"\n Started hitting {dish.name}")
-        sleep(3) # IO-bound task
+        sleep(3)  # IO-bound task
         print(f"The {dish} is warm")
 
     @staticmethod
-    def cook(dish:Dish):
+    def cook(dish: Dish):
         print(f"\n Started hitting {dish.name}")
-        _ = [i for i in range(120_000_000)] # CPU-bound task
+        _ = [i for i in range(120_000_000)]  # CPU-bound task
         print(f"The {dish.name} is ready")
 
+
 pizza = Dish(
-    name= "Peperoni",
-    size= DishSize.M,
-    ingredients=["tomato", "cheese", "pwperoni", "dough"]
+    name="Peperoni",
+    size=DishSize.M,
+    ingredients=["tomato", "cheese", "pwperoni", "dough"],
 )
 
 salad = Dish(
-    name = "Caesar",
-    size = DishSize.S,
-    ingredients=["tomato", "cheese", "pwperoni", "dough"]
+    name="Caesar",
+    size=DishSize.S,
+    ingredients=["tomato", "cheese", "pwperoni", "dough"],
 )
 
-dishes = [pizza , salad]
+dishes = [pizza, salad]
 
 # Regular Execution
 # for dish in dishes:
@@ -63,13 +65,7 @@ dishes = [pizza , salad]
 # #     thread.join()
 
 # processes
-tasks = [
-    Process(
-    target = Kitchen.cook,
-    args = [dish]
-) 
-    for dish in dishes
-]
+tasks = [Process(target=Kitchen.cook, args=[dish]) for dish in dishes]
 
 
 for task in tasks:
