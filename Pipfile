@@ -8,6 +8,8 @@ requests =  "~=2.31.0"
 black = "*"
 flake8 = "*"
 isort = "*"
+grequests = "*"
+httpx = "*"
 
 [dev-packages]
 black = "~=23.7"
