@@ -10,6 +10,7 @@ flake8 = "*"
 isort = "*"
 grequests = "*"
 httpx = "*"
+aiohttp = "*"
 
 [dev-packages]
 black = "~=23.7"
