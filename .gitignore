@@ -5,3 +5,4 @@ rockyou.txt
 debug.py
 files.py
 iterators.py
+__pycache__/
