@@ -29,11 +29,16 @@ base_url = "https://lyrsense.com/"
 
 async def main():
     async with aiohttp.ClientSession() as session:
-        for artist_name in artist_names:
-            result = await get_songs_by_artist(artist_name, session)
+        tasks = [
+            get_songs_by_artist(artist_name, session)
+            for artist_name in artist_names
+        ]
+        results = await asyncio.gather(*tasks)
+
+        for artist_name, result in zip(artist_names, results):
             with open(f"{artist_name}.txt", "w", encoding="utf-8") as file:
                 file.write(result)
-                print(f"Сохранено в {artist_name}.txt")
+                print(f"Saved in {artist_name}.txt")
 
 
 if __name__ == "__main__":
